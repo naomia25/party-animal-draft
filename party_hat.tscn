@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dhse4y2saet0r"]
+
+[ext_resource type="Script" uid="uid://drx3lp3w1amu1" path="res://party_hat.gd" id="1_xsomi"]
+[ext_resource type="Texture2D" uid="uid://bdr5enqfe1mea" path="res://party_hat_1__pink_-removebg-preview.png" id="2_xsomi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1lkm"]
+size = Vector2(6.900001, 10.800003)
+
+[node name="Party Hat" type="Node2D" unique_id=1279813956]
+position = Vector2(-0.99999994, 3)
+scale = Vector2(10, 10)
+script = ExtResource("1_xsomi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=465569159]
+position = Vector2(-4.1, 4.2)
+scale = Vector2(0.027777776, 0.03125)
+texture = ExtResource("2_xsomi")
+
+[node name="area2d" type="Area2D" parent="." unique_id=278666257]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area2d" unique_id=756058013]
+position = Vector2(-3.7499995, 4.699998)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_o1lkm")
+
+[connection signal="body_entered" from="area2d" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dgn7s0hqyarg0"]
+
+[ext_resource type="Script" uid="uid://cyngxio0om81s" path="res://balloon.gd" id="1_n2rxu"]
+[ext_resource type="Texture2D" uid="uid://dqt6x6uv8q50l" path="res://balloon_1__yellow_-removebg-preview.png" id="2_r345k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r345k"]
+size = Vector2(105, 246)
+
+[node name="Balloon" type="Node2D" unique_id=2051619150]
+script = ExtResource("1_n2rxu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=844629393]
+texture = ExtResource("2_r345k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=640573648]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2050087113]
+position = Vector2(-0.5, 14)
+shape = SubResource("RectangleShape2D_r345k")
