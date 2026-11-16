@@ -1,6 +1,7 @@
 Title : Party Animal 
 
 ** Not finished in the slightest, but playable. **
+
 Collect party supplies for the birthday party at the end!
 Move with arrow keys.
 
